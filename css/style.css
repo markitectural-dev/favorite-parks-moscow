@@ -1,0 +1,102 @@
+body {
+    background-color: #D4EAC0;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu a {
+    color: rgb(210, 23, 252);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subheader {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: rgb(250, 180, 49);
+}
+
+.description {
+    color: #3E2F2F;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.characteristics ul {
+    color: #1F3D1F;
+    font-weight: bold;
+    list-style-image: url(../media/ok.png);
+}
+
+.filter {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.filter select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.product {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #999;
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
+}
+
+.add-to-cart {
+    background-color: rgb(250, 180, 49);
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #c8e6b0;
+    border: 2px solid #3E6F1E;
+}
+
+.cart h2 {
+    margin-top: 0;
+}
+
+.cart ul {
+    padding-left: 20px;
+}
+
+.cart li {
+    margin-bottom: 5px;
+}
+
+.cart button {
+    margin-left: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+#pay-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}

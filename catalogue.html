@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Каталог парков</title>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalogue.html">Каталог парков</a></li>
+    </ul>
+
+    <hr>
+
+    <h1>Каталог</h1>
+
+    <!-- Фильтр по категории -->
+    <div class="filter">
+        <label for="category-filter">Фильтр по категории:</label>
+        <select id="category-filter">
+            <option value="all">Все</option>
+            <option value="museum">Музей-заповедник</option>
+            <option value="landscape">Ландшафтный заказник</option>
+        </select>
+    </div>
+
+    <br>
+
+    <!-- Товары (парки) -->
+    <div class="product" data-category="museum">
+        <img src="media/kolomenskoye_church-of-the-ascension.jpg" alt="Музей-заповедник «Коломенское»" width="300">
+        <br>
+        <a href="parks/kolomenskoye.html">Музей-заповедник «Коломенское»</a>
+        <p>Цена экскурсии: <b>500 руб.</b></p>
+        <button class="add-to-cart" data-id="1">Добавить в корзину</button>
+    </div>
+
+    <br>
+
+    <div class="product" data-category="museum">
+        <img src="media/tsaritsyno_big-palace.jpg" alt="Музей-заповедник «Царицыно»" width="300">
+        <br>
+        <a href="parks/tsaritsyno.html">Музей-заповедник «Царицыно»</a>
+        <p>Цена экскурсии: <b>600 руб.</b></p>
+        <button class="add-to-cart" data-id="2">Добавить в корзину</button>
+    </div>
+
+    <br>
+
+    <div class="product" data-category="museum">
+        <img src="media/sokolniki_arc.jpg" alt="Музей-заповедник «Сокольники»" width="300">
+        <br>
+        <a href="parks/sokolniki.html">Музей-заповедник «Сокольники»</a>
+        <p>Цена экскурсии: <b>350 руб.</b></p>
+        <button class="add-to-cart" data-id="3">Добавить в корзину</button>
+    </div>
+
+    <br>
+
+    <div class="product" data-category="landscape">
+        <img src="media/tepliy-stan_amphitheater.jpg" alt="Ландшафтный заказник «Тёплый Стан»" width="300">
+        <br>
+        <a href="parks/tepliy-stan.html">Ландшафтный заказник «Тёплый Стан»</a>
+        <p>Цена экскурсии: <b>200 руб.</b></p>
+        <button class="add-to-cart" data-id="4">Добавить в корзину</button>
+    </div>
+
+    <hr>
+
+    <!-- Корзина -->
+    <div class="cart">
+        <h2>Корзина</h2>
+        <ul id="cart-list"></ul>
+        <p id="cart-total"><b>Итого: 0 руб.</b></p>
+        <button id="pay-button">Оплатить</button>
+    </div>
+
+    <hr>
+
+    <p>© Все права защищены.</p>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

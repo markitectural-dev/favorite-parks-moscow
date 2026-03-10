@@ -9,6 +9,11 @@ const parks = [
 // Корзина покупок
 let cart = [];
 
+// Сохранение корзины в localStorage
+const saveCart = () => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+};
+
 // Общая сумма корзины
 const calculateTotal = () => {
     let total = 0;
@@ -19,12 +24,14 @@ const calculateTotal = () => {
 // Добавление товара в корзину
 const addToCart = (product) => {
     cart.push(product);
+    saveCart();
     renderCart();
 };
 
 // Удаление товара из корзины
 const removeFromCart = (index) => {
     cart.splice(index, 1);
+    saveCart();
     renderCart();
 };
 
@@ -73,12 +80,21 @@ const pay = () => {
     } else {
         alert("Оплата прошла успешно! Спасибо за покупку!");
         cart = [];
+	saveCart();
         renderCart();
     }
 };
 
 // Инициализация после загрузки страницы
 document.addEventListener("DOMContentLoaded", () => {
+
+    // Загрузка корзины из localStorage
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        renderCart();
+    }
+
     // Обработчики для кнопок «Добавить в корзину»
     const addButtons = document.querySelectorAll(".add-to-cart");
     addButtons.forEach(button => {
